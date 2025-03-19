@@ -1,19 +1,18 @@
 function convertToRoman(num) {
-  	const obj = {
-      0:['M',1000], 
-      1:['D', 500], 
-      2:['C', 100], 
-      3:['L', 50], 
-      4:['X', 10], 
-      5:['V', 5], 
-      6:['I', 1]
-    };
-
+  	const arr = [
+	['M',1000], 
+	['D', 500], 
+	['C', 100], 
+    ['L', 50], 
+	['X', 10], 
+	['V', 5], 
+	['I', 1]
+	];
   let result = '';
 
     // Iterate over the symbols
-    for (let i = 0; i < obj.length; i++) {
-        const [symbol, value] = obj[i];
+    for (let i = 0; i < arr.length; i++) {
+        const [symbol, value] = arr[i];
 
         // While the number is greater than or equal to the value
         while (num >= value) {
